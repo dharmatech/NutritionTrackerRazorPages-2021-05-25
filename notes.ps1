@@ -45,3 +45,24 @@ dotnet aspnet-codegenerator razorpage `
 dotnet tool install --global dotnet-ef
 
 dotnet ef database drop --force
+
+# ----------------------------------------------------------------------
+
+dotnet ef migrations add InitialCreate
+
+dotnet ef database update
+
+# ----------------------------------------------------------------------
+
+dotnet aspnet-codegenerator razorpage `
+    --model FoodItem `
+    --dataContext NutritionTrackerRazorPages.Data.NutritionTrackerContext `
+    --useDefaultLayout `
+    --relativeFolderPath Pages\FoodItems `
+    --referenceScriptLibraries `
+    --useSqlite
+
+# ----------------------------------------------------------------------
+
+dotnet ef migrations add FoodItem
+dotnet ef database update
