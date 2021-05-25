@@ -23,8 +23,15 @@ namespace NutritionTrackerRazorPages.Pages.FoodItems
         [BindProperty]
         public FoodItem FoodItem { get; set; }
 
+        public SelectList FoodCategorySelectList { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            FoodCategorySelectList = new SelectList(
+                _context.FoodCategory.OrderBy(food_category => food_category.Name).AsNoTracking(),
+                nameof(FoodCategory.Id),
+                nameof(FoodCategory.Name));
+
             if (id == null)
             {
                 return NotFound();

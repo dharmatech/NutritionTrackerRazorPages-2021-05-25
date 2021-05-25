@@ -19,11 +19,19 @@
                 <input asp-for="FoodItem.Name" class="form-control" />
                 <span asp-validation-for="FoodItem.Name" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="FoodItem.FoodCategoryId" class="control-label"></label>
-                <select asp-for="FoodItem.FoodCategoryId" class="form-control" asp-items="ViewBag.FoodCategoryId"></select>
+                                
+                <select asp-for="FoodItem.FoodCategoryId" class="form-control" asp-items="@Model.FoodCategorySelectList">
+                    <option value="">
+                        -- Select Food Category --
+                    </option>
+                </select>
+
                 <span asp-validation-for="FoodItem.FoodCategoryId" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="FoodItem.ServingSize" class="control-label"></label>
                 <input asp-for="FoodItem.ServingSize" class="form-control" />
