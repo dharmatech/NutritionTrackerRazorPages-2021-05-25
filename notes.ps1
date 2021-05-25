@@ -66,3 +66,19 @@ dotnet aspnet-codegenerator razorpage `
 
 dotnet ef migrations add FoodItem
 dotnet ef database update
+
+# ----------------------------------------------------------------------
+
+dotnet aspnet-codegenerator razorpage `
+    --model HealthRecord `
+    --dataContext NutritionTrackerRazorPages.Data.NutritionTrackerContext `
+    --useDefaultLayout `
+    --relativeFolderPath Pages\HealthRecords `
+    --referenceScriptLibraries `
+    --useSqlite
+
+# ----------------------------------------------------------------------
+
+dotnet ef migrations add HealthRecord
+dotnet ef database update
+
