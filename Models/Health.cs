@@ -8,6 +8,8 @@ namespace NutritionTrackerRazorPages.Models
 {
     public class HealthRecord
     {
+        public int Id { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
