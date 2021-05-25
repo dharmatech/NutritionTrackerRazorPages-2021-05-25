@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NutritionTrackerRazorPages.Data;
 
 namespace NutritionTrackerRazorPages.Migrations
 {
     [DbContext(typeof(NutritionTrackerContext))]
-    partial class NutritionTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210525074614_HealthRecord")]
+    partial class HealthRecord
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
