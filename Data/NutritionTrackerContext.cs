@@ -14,8 +14,10 @@ namespace NutritionTrackerRazorPages.Data
         {
         }
 
-        public DbSet<NutritionTrackerRazorPages.Models.FoodCategory> FoodCategory { get; set; }
+        public DbSet<FoodCategory> FoodCategory { get; set; }
 
-        public DbSet<NutritionTrackerRazorPages.Models.FoodItem> FoodItem { get; set; }
+        public DbSet<FoodItem> FoodItem { get; set; }
+
+        public DbSet<NutritionTrackerRazorPages.Models.HealthRecord> HealthRecord { get; set; }
     }
 }
