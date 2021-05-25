@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NutritionTrackerRazorPages.Models
 {
-    public class Health
+    public class HealthRecord
     {
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
